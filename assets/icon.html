@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  /* Rendered locally to icon-512.png — never served under the CSP. */
+  * { margin: 0; padding: 0; }
+  html, body { width: 512px; height: 512px; overflow: hidden; }
+  body { background: #0B2B21; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<!-- 12% safe padding for maskable: content kept within 62..450.
+     Family mark: the moratorium wedge — here with the THREE exit paths,
+     the explainer's signature. -->
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#0B2B21"/>
+  <defs>
+    <pattern id="hatch" width="22" height="22" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="22" stroke="#C4A44E" stroke-width="5" opacity="0.75"/>
+    </pattern>
+  </defs>
+  <!-- the moratorium wedge rising from the principal baseline -->
+  <polygon points="78,392 300,392 300,178 78,348" fill="url(#hatch)"/>
+  <!-- capitalisation tick -->
+  <rect x="300" y="140" width="26" height="252" rx="7" fill="#E6D28E"/>
+  <!-- three exit paths: A solid sage, B dashed gold, C dotted copper -->
+  <path d="M326 160 C 386 210, 420 310, 438 386" fill="none" stroke="#8FA79A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M326 236 C 380 280, 416 330, 436 388" fill="none" stroke="#E6D28E" stroke-width="16" stroke-linecap="round" stroke-dasharray="28 20"/>
+  <path d="M326 312 C 372 340, 408 362, 434 390" fill="none" stroke="#E0A96D" stroke-width="16" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <!-- baseline -->
+  <line x1="66" y1="392" x2="446" y2="392" stroke="#E6D28E" stroke-width="14" stroke-linecap="round"/>
+</svg>
+</body>
+</html>

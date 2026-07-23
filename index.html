@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'">
+  <title>eduloan explained — the education loan moratorium, animated: what the repayment holiday really costs</title>
+  <meta name="description" content="Education loan moratorium explained: how simple interest accrues while nobody pays, why it is capitalised into your EMI, and how paying a little during study saves lakhs — an animated walkthrough of the free eduloan calculator.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/eduloan-explained/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Sreenivas Sadhu Prabhakara">
+  <meta name="keywords" content="education loan moratorium explained, education loan moratorium period, pay interest during moratorium, education loan emi calculator, moratorium interest capitalisation, IBA model education loan scheme, should I pay interest during study, education loan repayment holiday">
+  <meta name="theme-color" content="#0B2B21" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F0F3EB" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="eduloan explained">
+  <meta property="og:title" content="The education loan moratorium, explained — what the repayment holiday really costs">
+  <meta property="og:description" content="Interest accrues while nobody pays, then it is added to your principal and your EMI is set on the total. An animated walkthrough of the choice that routinely moves an education loan by lakhs.">
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/eduloan-explained/">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/eduloan-explained/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="eduloan explained — the moratorium wedge of accruing interest, and the three ways out of it">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The education loan moratorium, explained — what the repayment holiday really costs">
+  <meta name="twitter:description" content="Interest accrues while nobody pays, then it is added to your principal and your EMI is set on the total. An animated walkthrough of the choice that routinely moves an education loan by lakhs.">
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/eduloan-explained/og-image.png">
+  <meta name="twitter:image:alt" content="eduloan explained — the moratorium wedge of accruing interest, and the three ways out of it">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Structured data (data blocks; not executable script) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "eduloan explained",
+    "url": "https://sreenivas-sadhu-prabhakara.github.io/eduloan-explained/",
+    "description": "An animated explainer of the education-loan moratorium — how simple interest accrues while nobody pays, why it is capitalised into the EMI, and how the eduloan calculator compares the three ways out to the paisa.",
+    "inLanguage": "en-IN",
+    "author": { "@type": "Person", "name": "Sreenivas Sadhu Prabhakara" },
+    "license": "https://opensource.org/licenses/MIT",
+    "about": {
+      "@type": "WebApplication",
+      "name": "eduloan",
+      "url": "https://sreenivas-sadhu-prabhakara.github.io/eduloan/",
+      "description": "An education-loan EMI calculator that models the moratorium: simple interest accruing through course + 12 months per the cited IBA model scheme, then EMI on the capitalised balance — with full-moratorium, interest-served and partial-payment scenarios compared to the paisa.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any (modern web browser)",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+      "softwareVersion": "0.1.0",
+      "author": { "@type": "Person", "name": "Sreenivas Sadhu Prabhakara" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the moratorium period on an education loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the IBA Model Education Loan Scheme, the repayment holiday (moratorium) is the course period plus one year. Simple interest accrues during it, and at the start of repayment the accrued interest is added to the principal — your EMI is then set on that larger total. Individual banks may apply their own variations, so your sanction letter governs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I pay interest during the moratorium of my education loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is a personal decision, but the arithmetic is large: on a worked ₹10 lakh loan at 10% with a 4-year course, serving the monthly interest during study reduces total outflow by ₹2,92,904.15 versus paying nothing, and even ₹3,000 a month saves ₹1,05,445.79. The free eduloan calculator computes the same comparison for your own figures, to the paisa, entirely in your browser. It is informational only, not financial advice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does education loan moratorium interest use simple or compound interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IBA model scheme prescribes simple interest during the moratorium, capitalised once at the start of repayment. Some banks compound monthly instead. The eduloan calculator models the simple-interest treatment by default and has a labelled toggle for monthly compounding — figures may still differ from your bank's statement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the eduloan calculator private? Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The page ships a Content-Security-Policy with connect-src 'none', so the browser itself refuses every outgoing network request — loan figures cannot leave the page even by accident. There are no accounts, no analytics, no cookies and no CDN; saved scenarios live only in your browser's localStorage, and the page keeps working with no connection at all."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="#top" aria-label="eduloan explained — back to top">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+          <polygon points="8,50 42,50 42,22 8,44" fill="currentColor" opacity="0.55"/>
+          <rect x="42" y="14" width="5" height="36" fill="currentColor"/>
+          <line x1="6" y1="50" x2="56" y2="50" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name"><strong>eduloan</strong> · explained</span>
+      </a>
+      <nav aria-label="Primary">
+        <a class="btn btn-ghost" href="#how">How it works</a>
+        <a class="btn btn-gold" href="https://sreenivas-sadhu-prabhakara.github.io/eduloan/">Open the calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-h1">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">An animated walkthrough of the free eduloan calculator</p>
+          <h1 id="hero-h1">Education loan moratorium explained — the interest that accrues while nobody pays</h1>
+          <p class="lede">Your bank calls it a repayment holiday. For the whole course plus twelve months, no EMI is due — and simple interest quietly stacks up on every rupee disbursed. At the end it is <strong>added to your principal</strong>, and your EMI is set on the total. That one clause routinely moves an education loan by <strong>lakhs</strong>.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold btn-big" href="https://sreenivas-sadhu-prabhakara.github.io/eduloan/">Open eduloan — free, no signup</a>
+            <a class="btn btn-ghost btn-big" href="#problem">See the arithmetic ↓</a>
+          </div>
+          <p class="hero-note">Runs entirely in your browser · nothing leaves your device · <a href="#privacy">why that's enforced, not promised</a></p>
+        </div>
+        <figure class="hero-fig" aria-labelledby="hero-cap">
+          <svg class="hero-svg" viewBox="0 0 720 380" aria-hidden="true">
+            <defs>
+              <pattern id="hatchHero" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="14" class="hatch-line"/>
+              </pattern>
+            </defs>
+            <!-- baseline -->
+            <line class="ax" x1="36" y1="308" x2="690" y2="308"/>
+            <!-- principal marker -->
+            <line class="p-line" x1="60" y1="272" x2="368" y2="272"/>
+            <text class="svg-lab" x="60" y="262">principal — nobody pays</text>
+            <!-- the wedge: interest accruing through course + 12 months -->
+            <polygon class="hw-wedge" points="60,272 368,272 368,140 60,272" fill="url(#hatchHero)"/>
+            <text class="svg-lab lab-gold" x="150" y="212" transform="rotate(-19 150 212)">interest accruing…</text>
+            <!-- capitalisation tick -->
+            <rect class="hw-tick" x="368" y="120" width="10" height="188" rx="4"/>
+            <text class="svg-lab lab-gold" x="384" y="112">capitalised: EMI is set here</text>
+            <!-- amortization descent -->
+            <path class="hw-exit wipe" d="M382 132 C 470 160, 590 240, 676 304" pathLength="1"/>
+            <!-- phase labels -->
+            <text class="svg-lab" x="60" y="336">course + 12 months (moratorium)</text>
+            <text class="svg-lab" x="470" y="336">repayment years</text>
+          </svg>
+          <figcaption id="hero-cap" class="fig-cap">The moratorium wedge: simple interest rises over the study years, snaps onto the principal at capitalisation, and the EMI amortises the taller total.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="band" id="problem" aria-labelledby="problem-h2" data-animate>
+      <div class="wrap">
+        <h2 id="problem-h2" class="rev">The number generic EMI calculators never show you</h2>
+        <p class="section-lede rev">Type ₹10,00,000 at 10% for 10 years into any EMI tool and it says <strong class="num">₹13,215.07</strong> a month. True — and useless for an education loan, because it prices the loan as if repayment starts tomorrow. It doesn't. Under the IBA Model Education Loan Scheme, repayment starts after the <em>course period plus 12 months</em>, and the interest for that whole stretch is yours to carry.</p>
+        <div class="problem-grid">
+          <div class="stat-card rev">
+            <p class="stat-kicker">Worked example, verified to the paisa</p>
+            <p class="stat-line">₹10,00,000 sanctioned · 10% p.a. · 4-year course + 12-month tail · 10-year repayment</p>
+            <dl class="stat-list">
+              <div class="stat"><dt>Simple interest accrued while nobody pays</dt><dd class="num accent">₹5,00,000</dd></div>
+              <div class="stat"><dt>Balance the day your first EMI is set</dt><dd class="num">₹15,00,000</dd></div>
+              <div class="stat"><dt>EMI on that capitalised balance</dt><dd class="num">₹19,822.61 <span class="vs">not ₹13,215.07</span></dd></div>
+            </dl>
+          </div>
+          <figure class="accrual-fig rev" aria-labelledby="accrual-cap">
+            <svg class="accrual-svg" viewBox="0 0 560 120" aria-hidden="true">
+              <rect class="bar-principal" x="10" y="40" width="340" height="40" rx="6"/>
+              <g class="grow-group">
+                <rect class="bar-accrual" x="350" y="40" width="170" height="40" rx="6"/>
+              </g>
+              <text class="svg-lab lab-on-bar" x="30" y="65">principal ₹10,00,000</text>
+              <text class="svg-lab lab-gold" x="352" y="30">+ ₹5,00,000 accrued</text>
+              <text class="svg-lab" x="10" y="108">60 months of silence, capitalised in one line of your sanction letter</text>
+            </svg>
+            <figcaption id="accrual-cap" class="fig-cap">Five years of simple interest becomes principal the day repayment begins.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW: THREE WAYS OUT ============ -->
+    <section class="band band-alt" id="how" aria-labelledby="how-h2" data-animate>
+      <div class="wrap">
+        <h2 id="how-h2" class="rev">Three ways out — the comparison eduloan is built around</h2>
+        <p class="section-lede rev">The moratorium is a choice, not a sentence. You can pay nothing, serve the interest, or pay whatever little a family can spare. eduloan builds the full month-by-month schedule for all three and puts them side by side — computed in integer paise, so every difference is exact.</p>
+
+        <figure class="chart-fig rev" aria-labelledby="chart-cap">
+          <svg class="chart-svg" viewBox="0 0 760 430" aria-hidden="true">
+            <defs>
+              <pattern id="hatchChart" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="12" class="hatch-line"/>
+              </pattern>
+            </defs>
+            <!-- moratorium region -->
+            <rect class="mora-region" x="60" y="52" width="320" height="328"/>
+            <text class="svg-lab" x="70" y="72">moratorium — course + 12 months</text>
+            <text class="svg-lab" x="470" y="72">repayment</text>
+            <!-- axes -->
+            <line class="ax" x1="60" y1="380" x2="720" y2="380"/>
+            <!-- the wedge between path A and the principal line -->
+            <polygon class="ch-wedge" points="60,180 380,180 380,80" fill="url(#hatchChart)"/>
+            <!-- capitalisation tick -->
+            <line class="ch-tick" x1="380" y1="64" x2="380" y2="380"/>
+            <!-- Scenario A: balance climbs to 15L, then amortises -->
+            <path class="path-a wipe" d="M60 180 L380 80 C 500 92, 620 190, 718 378" pathLength="1"/>
+            <!-- Scenario C: climbs to 13.2L -->
+            <path class="path-c wipe wipe-d2" d="M60 180 L380 116 C 495 128, 615 215, 714 378" pathLength="1"/>
+            <!-- Scenario B: held flat at 10L -->
+            <path class="path-b wipe wipe-d3" d="M60 180 L380 180 C 490 190, 600 255, 710 378" pathLength="1"/>
+            <!-- balance labels -->
+            <text class="svg-lab lab-a num" x="388" y="86">A ₹15,00,000</text>
+            <text class="svg-lab lab-c num" x="388" y="122">C ₹13,20,000</text>
+            <text class="svg-lab lab-b num" x="388" y="200">B ₹10,00,000</text>
+            <text class="svg-lab" x="60" y="404">study years</text>
+            <text class="svg-lab" x="640" y="404">closes at ₹0.00</text>
+          </svg>
+          <figcaption id="chart-cap" class="fig-cap">Loan balance over time for the worked ₹10-lakh loan. A (pay nothing) peaks at ₹15,00,000; C (₹3,000/month) at ₹13,20,000; B (interest served) never grows. Every path amortises to exactly zero.</figcaption>
+          <button class="btn btn-ghost btn-small replay" type="button" data-replay="how" hidden>Replay animation</button>
+        </figure>
+
+        <ul class="legend" aria-hidden="true">
+          <li><span class="sw sw-a"></span>A — full moratorium</li>
+          <li><span class="sw sw-b"></span>B — interest served</li>
+          <li><span class="sw sw-c"></span>C — partial ₹3,000/mo</li>
+        </ul>
+
+        <div class="scen-grid">
+          <article class="scen-card scen-a rev" aria-labelledby="scen-a-h">
+            <h3 id="scen-a-h"><span class="scen-badge">A</span> Full moratorium</h3>
+            <p class="scen-sub">Pay nothing until repayment begins — the default nobody questions.</p>
+            <dl class="figs">
+              <div><dt>Paid during study</dt><dd class="num">₹0</dd></div>
+              <div><dt>Balance at EMI start</dt><dd class="num">₹15,00,000</dd></div>
+              <div><dt>EMI for 10 years</dt><dd class="num">₹19,822.61</dd></div>
+              <div><dt>Total interest</dt><dd class="num">₹13,78,713.27</dd></div>
+              <div><dt>Total outflow</dt><dd class="num strong">₹23,78,713.27</dd></div>
+            </dl>
+            <p class="scen-delta baseline">the baseline everything is measured against</p>
+          </article>
+          <article class="scen-card scen-b rev" aria-labelledby="scen-b-h">
+            <h3 id="scen-b-h"><span class="scen-badge">B</span> Interest served</h3>
+            <p class="scen-sub">₹8,333.33 a month during study keeps the principal untouched.</p>
+            <dl class="figs">
+              <div><dt>Paid during study</dt><dd class="num">₹5,00,000</dd></div>
+              <div><dt>Balance at EMI start</dt><dd class="num">₹10,00,000</dd></div>
+              <div><dt>EMI for 10 years</dt><dd class="num">₹13,215.07</dd></div>
+              <div><dt>Total interest</dt><dd class="num">₹10,85,809.12</dd></div>
+              <div><dt>Total outflow</dt><dd class="num strong">₹20,85,809.12</dd></div>
+            </dl>
+            <p class="scen-delta saves">saves <strong class="num">₹2,92,904.15</strong> vs paying nothing</p>
+          </article>
+          <article class="scen-card scen-c rev" aria-labelledby="scen-c-h">
+            <h3 id="scen-c-h"><span class="scen-badge">C</span> Partial ₹3,000/mo</h3>
+            <p class="scen-sub">What a family can actually spare still bends the whole curve.</p>
+            <dl class="figs">
+              <div><dt>Paid during study</dt><dd class="num">₹1,80,000</dd></div>
+              <div><dt>Balance at EMI start</dt><dd class="num">₹13,20,000</dd></div>
+              <div><dt>EMI for 10 years</dt><dd class="num">₹17,443.90</dd></div>
+              <div><dt>Total interest</dt><dd class="num">₹12,73,267.48</dd></div>
+              <div><dt>Total outflow</dt><dd class="num strong">₹22,73,267.48</dd></div>
+            </dl>
+            <p class="scen-delta saves">saves <strong class="num">₹1,05,445.79</strong> vs paying nothing</p>
+          </article>
+        </div>
+        <p class="fine rev">Worked example only: lump-sum disbursement, simple-interest accrual per the IBA model scheme, one constant rate for the whole tenor. Every figure above is re-derived by this page's own test suite with the same paise-exact conventions the calculator uses. Your loan will differ — <a href="https://sreenivas-sadhu-prabhakara.github.io/eduloan/">run your own numbers</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ THE ENGINE ============ -->
+    <section class="band" id="engine" aria-labelledby="engine-h2" data-animate>
+      <div class="wrap">
+        <h2 id="engine-h2" class="rev">An engine that shows its working</h2>
+        <p class="section-lede rev">No black box. The calculator's arithmetic follows published rules, cites them verbatim, and proves itself.</p>
+        <div class="feat-grid">
+          <div class="feat rev">
+            <h3>Integer paise, everywhere</h3>
+            <p>All money is computed in integer paise — never floating rupees — and every schedule closes at exactly <span class="num">₹0.00</span>. The closed-form annuity EMI is cross-checked against the full month-by-month simulation.</p>
+          </div>
+          <div class="feat rev">
+            <h3>The IBA scheme, cited</h3>
+            <p>Simple interest through course + 12 months, capitalised at repayment start — the model-scheme treatment, quoted verbatim in the app's rules panel with source and verified-on date. A labelled toggle switches to monthly compounding for banks that do that instead.</p>
+          </div>
+          <div class="feat rev">
+            <h3>Section 80E, without the hype</h3>
+            <p>The app shows the verbatim statute and your per-financial-year interest-paid figures — the number an 80E deduction claim is based on. It never invents a "tax saved" rupee amount.</p>
+          </div>
+          <div class="feat rev">
+            <h3>CSIS, honestly handled</h3>
+            <p>A cited eligibility checklist for the Central Sector Interest Subsidy. Declaring yourself eligible annotates the full-moratorium scenario — "borne by GoI if approved, confirm with your bank" — and never silently changes the math.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIVACY ============ -->
+    <section class="band band-alt" id="privacy" aria-labelledby="privacy-h2" data-animate>
+      <div class="wrap">
+        <h2 id="privacy-h2" class="rev">Privacy that is enforced, not promised</h2>
+        <p class="section-lede rev">A loan application is your family's whole balance sheet. Most calculators promise not to send it anywhere. eduloan makes the promise <strong>impossible to break</strong>: the page ships a Content-Security-Policy the browser itself enforces.</p>
+        <div class="priv-grid">
+          <figure class="priv-fig rev" aria-labelledby="priv-cap">
+            <svg class="priv-svg" viewBox="0 0 640 200" aria-hidden="true">
+              <!-- the document -->
+              <rect class="doc" x="30" y="50" width="110" height="120" rx="10"/>
+              <line class="doc-line" x1="50" y1="82" x2="120" y2="82"/>
+              <line class="doc-line" x1="50" y1="106" x2="120" y2="106"/>
+              <line class="doc-line" x1="50" y1="130" x2="100" y2="130"/>
+              <text class="svg-lab" x="30" y="36">your loan figures</text>
+              <!-- attempted request -->
+              <line class="req-path" x1="150" y1="110" x2="410" y2="110"/>
+              <circle class="req-dot" cx="160" cy="110" r="7"/>
+              <!-- the wall -->
+              <rect class="csp-wall" x="418" y="34" width="14" height="150" rx="6"/>
+              <g class="blocked-x">
+                <line x1="404" y1="96" x2="432" y2="124"/>
+                <line x1="432" y1="96" x2="404" y2="124"/>
+              </g>
+              <text class="svg-lab lab-gold" x="352" y="26">connect-src 'none'</text>
+              <!-- the unreachable internet -->
+              <g class="cloud">
+                <ellipse cx="540" cy="112" rx="58" ry="30"/>
+                <ellipse cx="508" cy="96" rx="30" ry="20"/>
+                <ellipse cx="566" cy="92" rx="26" ry="18"/>
+              </g>
+              <text class="svg-lab lab-dim" x="498" y="166">unreachable</text>
+            </svg>
+            <figcaption id="priv-cap" class="fig-cap">Every outgoing request dies at the policy wall — the browser refuses it before it exists.</figcaption>
+          </figure>
+          <div class="priv-copy rev">
+            <pre class="csp-block" aria-label="The Content-Security-Policy header"><code>Content-Security-Policy:
+  default-src 'self';
+  <mark>connect-src 'none'</mark>;
+  img-src 'self' data:;
+  base-uri 'none'; form-action 'none';
+  frame-ancestors 'none'; object-src 'none'</code></pre>
+            <ul class="priv-list">
+              <li><strong>No network path exists.</strong> <code>connect-src 'none'</code> means the browser refuses every outgoing request — not "we don't send data", but "sending is impossible".</li>
+              <li><strong>Nothing external, ever.</strong> No analytics, no cookies, no CDN, no web fonts, no service worker. Open DevTools and watch: zero requests after load.</li>
+              <li><strong>Yours stays yours.</strong> Saved scenarios live only in your browser's localStorage; print and CSV export are the only ways data leaves — both by your hand.</li>
+              <li><strong>Works with no connection at all.</strong> Load it once, switch off the network, and everything still computes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE TOUR ============ -->
+    <section class="band" id="tour" aria-labelledby="tour-h2" data-animate>
+      <div class="wrap">
+        <h2 id="tour-h2" class="rev">What's inside the calculator</h2>
+        <div class="feat-grid tour-grid">
+          <div class="feat rev">
+            <h3>Your loan, precisely</h3>
+            <p>Sanctioned amount, rate, course length, an editable moratorium tail, tenure up to 15 years, and lump-sum or yearly/semester tranche disbursement — with instant recompute.</p>
+          </div>
+          <div class="feat rev">
+            <h3>The moratorium wedge</h3>
+            <p>A live timeline of your three balance paths — the hatched gold wedge is your interest accruing while nobody pays, redrawn as you type.</p>
+          </div>
+          <div class="feat rev">
+            <h3>Month-by-month schedules</h3>
+            <p>Accrual rows through the moratorium, then amortisation grouped by year, closing at exactly ₹0.00 — with per-financial-year (April–March) interest subtotals for your 80E claim.</p>
+          </div>
+          <div class="feat rev">
+            <h3>Named scenarios</h3>
+            <p>Save comparisons under your own names in localStorage, and come back to them — nothing needs an account.</p>
+          </div>
+          <div class="feat rev">
+            <h3>Print &amp; CSV</h3>
+            <p>A one-page printable comparison sheet (three scenarios, assumptions and sources) and RFC-4180 CSV export of any schedule — the only backup, by design.</p>
+          </div>
+          <div class="feat rev">
+            <h3>Rules panel</h3>
+            <p>Every fact the engine relies on — IBA scheme clauses, Section 80E, CSIS figures — listed with clause citation, source and verified-on date. Nothing invented.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="band cta-band" aria-labelledby="cta-h2" data-animate>
+      <div class="wrap cta-inner rev">
+        <h2 id="cta-h2">Model your own loan before you sign for it</h2>
+        <p>Free, no signup, no tracking — and the moratorium finally on the table.</p>
+        <a class="btn btn-gold btn-big" href="https://sreenivas-sadhu-prabhakara.github.io/eduloan/">Open the eduloan calculator</a>
+        <p class="cta-sub">sreenivas-sadhu-prabhakara.github.io/eduloan</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="foot-disclaimer"><strong>Disclaimer.</strong> This explainer and the eduloan calculator are informational tools, <strong>not financial, tax, or investment advice</strong>. The worked example on this page assumes a lump-sum disbursement, simple-interest moratorium accrual per the IBA Model Education Loan Scheme, and one constant rate for the whole tenor; education loans are floating-rate, and banks apply their own rules — your sanction letter, statements and interest certificate govern. Scheme facts (IBA moratorium clauses, Section 80E, CSIS) are cited in the calculator's rules panel with sources, verified on 2026-07-23, and may be amended. The software is provided "as is", without warranty of any kind. Verify every figure with your bank and a qualified professional before acting.</p>
+      <p class="foot-links">
+        <a href="https://sreenivas-sadhu-prabhakara.github.io/eduloan/">The eduloan calculator</a> ·
+        <a href="https://github.com/Sreenivas-Sadhu-Prabhakara/eduloan-explained">Source (MIT)</a> ·
+        © 2026 Sreenivas Sadhu Prabhakara
+      </p>
+    </div>
+  </footer>
+
+  <script src="data/example.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
